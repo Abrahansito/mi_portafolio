@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Portafolio</title>
+  <!-- Archivo CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Iconos (opcional, por ejemplo, de Font Awesome) -->
+  <!-- Reemplaza "YOUR_KIT_CODE" con tu kit de FontAwesome si lo deseas -->
+  <!-- <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script> -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <header class="header">
+    <div class="logo">
+       <img src="imagenes/iconodev1.png" alt="Logo" style="height:40px;">
+    </div>
+    <!-- Navegación -->
+    <nav class="navbar" id="navbar"> 
+      <ul class="nav-list">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="ruta/a/tu-cv.pdf" download>Descargar CV</a></li>
+      </ul>
+    </nav>
+    <!-- Ícono hamburguesa para menú responsive -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+ <!-- Hero Section Modernizado -->
+<section class="hero-modern" id="inicio">
+  <div class="hero-left">
+    <h1>Hola, soy <span class="highlight">Abraham Huamán</span></h1>
+    <h2>Estudiante de Ingeniería de Computación y Sistemas</h2>
+    <p>Apasionado por el desarrollo web y la tecnología.</p>
+    <a href="#contacto" class="btn-main">Contáctame</a>
+    <a href="#proyectos" class="btn-secondary">Ver Proyectos</a>
+    <p class="social-text">Sígueme en mis redes sociales:</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="https://youtube.com/@abrahamhc9?si=cdDbJTCbxC989cDx"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Abrahansito"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="circle-bg">
+      <img src="imagenes/fotito.jpeg" alt="Mi Foto" />
+    </div>
+  </div>
+</section>
+
+  <!-- Sección Servicios -->
+  <section class="services" id="servicios">
+    <h2>HABILIDADES</h2>
+    <div class="services-grid">
+      <div class="service">
+        <i class="fas fa-pencil-ruler"></i>
+        <h3>UI/UX Design</h3>
+        <p>Diseños atractivos y funcionales para mejorar la experiencia del usuario.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-code"></i>
+        <h3>Desarrollo Front-end</h3>
+        <p>Páginas web responsivas y eficientes con las últimas tecnologías.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Desarrollo Backend</h3>
+        <p>Soluciones robustas y escalables para el manejo de datos y lógica de negocio.</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Sección Proyectos -->
+  <section class="projects" id="proyectos">
+    <h2>PROYECTOS DESTACADOS</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="project1.png" alt="Proyecto 1" />
+        <h3>Proyecto 1</h3>
+        <p>Breve descripción de tu proyecto.</p>
+      </div>
+      <div class="project-card">
+        <img src="project2.png" alt="Proyecto 2" />
+        <h3>Proyecto 2</h3>
+        <p>Breve descripción de tu proyecto.</p>
+      </div>
+      <div class="project-card">
+        <img src="imagenes/proyecto3.png" alt="Proyecto 3" />
+        <h3>Arteria Merch</h3>
+        <p>El proyecto consiste en el desarrollo de una 
+          tienda virtual de merchandising enfocada en 
+          productos de artistas, anime, series y películas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section class="contact" id="contacto">
+    <h2>CONTACTO</h2>
+    <form class="contact-form">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>© 2025 Abraham. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Archivo JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+

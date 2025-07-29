@@ -1,0 +1,437 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuentes y colores */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background-color: #242424;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Navegación */
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-list li a:hover,
+.nav-list li a.active {
+  color: #a0ffff;;
+}
+
+/* Ícono hamburguesa (versión móvil) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Hero Moderno */
+.hero-modern {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 3rem;
+  background: #232323;
+}
+
+.hero-left {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.hero-left .highlight {
+  color: #a0ffff;
+}
+
+.hero-left h2 {
+  font-size: 1.5rem;
+  color: #a0ffff;;
+  margin-bottom: 1rem;
+}
+
+.hero-left p {
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.btn-main {
+  background: transparent;
+  color: #a0ffff;;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #a0ffff;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  margin-bottom: 2rem;
+  display: inline-block;
+  font-size: 1.1rem;
+  box-shadow: 0 0 16px 4px #a0ffff;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+.btn-main:hover {
+  background: #a0ffff;
+  color: #232323;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #a0ffff;
+  padding: 0.8rem 2rem;
+  border: 2px solid #a0ffff;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  margin-bottom: 2rem;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin-left: 1rem;
+  box-shadow: 0 0 16px 4px #a0ffff;
+  text-align: center;
+  margin-right: 1rem;
+}
+.btn-secondary:hover {
+  background: #a0ffff;
+  color: #232323;
+  transform: scale(1.05);
+}
+
+.social-icons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a0ffff;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.6rem;
+  box-shadow: 0 0 16px 4px #a0ffff;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: #7cb7ff;
+  transform: scale(1.12);
+}
+
+/* Asegura que los íconos sean visibles dentro de los círculos */
+.social-icons i {
+  color: #232323; /* Negro/gris oscuro */
+  transition: color 0.3s;
+}
+
+.social-icons a:hover i {
+  color: #fff; /* Ícono blanco al hacer hover */
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-bg {
+  border-radius: 500%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.circle-bg img {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  object-fit: cover; 
+}
+
+/* Logos de certificaciones */
+.trusted-by {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.trusted-by p {
+  margin-right: 0.5rem;
+  color: #fff;
+}
+
+.trusted-by img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin-right: 0.5rem;
+  padding: 4px;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0.85;
+}
+
+.trusted-by img:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+/* Sección Servicios */
+.services {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #232323;
+}
+
+.services h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color:#a0ffff;;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service {
+  background-color: #242424;
+  padding: 2rem;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.service i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color:#a0ffff;;
+}
+
+/* Sección Proyectos */
+.projects {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #1f1f1f;
+}
+
+.projects h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #a0ffff;;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #242424;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+/* Sección Contacto */
+.contact {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #232323;
+}
+
+.contact h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #a0ffff;;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  text-align: left;
+  margin-top: 1rem;
+  color: #fff;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  color: #fff;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  margin-top: 1.5rem;
+  background: #a0ffff;;
+  color: #232323;
+  border: none;
+  border-radius: 30px;
+  padding: 0.8rem 2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #a0ffff;;
+}
+
+/* Pie de página */
+.footer {
+  background-color: #242424;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .hero-modern {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .hero-left {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  .circle-bg {
+    width: 220px;
+    height: 220px;
+  }
+  .circle-bg img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .navbar {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #242424;
+    width: 200px;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+  .navbar.active {
+    transform: translateX(0%);
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  .hero-modern {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+}
