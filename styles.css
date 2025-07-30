@@ -281,6 +281,31 @@ body {
   color:#a0ffff;;
 }
 
+
+
+.tech-logos {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tech-logos img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.tech-logos img:hover {
+  transform: scale(1.15);
+}
+
+
+
 /* Sección Proyectos */
 .projects {
   padding: 3rem 2rem;
