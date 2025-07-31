@@ -267,12 +267,16 @@ body {
 .service {
   background-color: #242424;
   padding: 2rem;
-  border-radius: 8px;
-  transition: transform 0.3s;
+  border-radius: 12px;
+  border: 2px solid #a0ffff; /* Borde visible y moderno */
+  box-shadow: 0 0 24px 4px #222, 0 0 8px 2px #a0ffff; /* Sombra extra */
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .service:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.03); /* Efecto de elevación al hacer hover */ 
+  border-color: #fff; /* Cambia el color del borde al hacer hover */
+  box-shadow: 0 0 32px 8px #a0ffff, 0 0 16px 4px #222; /* Sombra más intensa al hacer hover */
 }
 
 .service i {
@@ -304,8 +308,6 @@ body {
   transform: scale(1.15);
 }
 
-
-
 /* Sección Proyectos */
 .projects {
   padding: 3rem 2rem;
@@ -328,12 +330,16 @@ body {
 .project-card {
   background-color: #242424;
   padding: 1.5rem;
-  border-radius: 8px;
-  transition: transform 0.3s;
+  border-radius: 12px;
+  border: 2px solid #a0ffff; /* Borde visible y moderno */
+  box-shadow: 0 0 24px 4px #222, 0 0 8px 2px #a0ffff; /* Sombra extra */
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.03);
+  border-color: #fff;
+  box-shadow: 0 0 32px 8px #a0ffff, 0 0 16px 4px #222;
 }
 
 .project-card img {
