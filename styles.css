@@ -398,6 +398,10 @@ body {
   background: #a0ffff;;
 }
 
+.swal2-ok-btn .swal2-ok-text {
+  color: #232323 !important;
+}
+
 /* Pie de página */
 .footer {
   background-color: #242424;

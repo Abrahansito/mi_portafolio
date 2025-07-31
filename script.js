@@ -1,16 +1,28 @@
 // Seleccionar elementos
-const hamburger = document.getElementById("hamburger");
-const navbar = document.getElementById("navbar");
+const hamburger = document.getElementById("hamburger"); // Botón de menú hamburguesa
+const navbar = document.getElementById("navbar"); // Barra de navegación
 
 // Evento para abrir/cerrar menú en dispositivos móviles
-hamburger.addEventListener("click", () => {
-  navbar.classList.toggle("active");
+hamburger.addEventListener("click", () => {   
+  navbar.classList.toggle("active"); // Alterna la clase 'active' para mostrar/ocultar el menú
 });
 
 // Ejemplo de alerta al enviar el formulario de contacto
 const contactForm = document.querySelector(".contact-form");
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  alert("¡Gracias por tu mensaje! Me pondré en contacto pronto.");
-  contactForm.reset();
+  Swal.fire({
+    icon: 'success', // Icono de éxito
+    title: '¡Mensaje enviado!', // Título del alert
+    text: 'Gracias por tu interés. Me pondré en contacto pronto.', // Texto del alert
+    background: '#232323',         // Fondo del alert
+    color: '#a0ffff',              // Color del texto
+    confirmButtonColor: '#a0ffff',  // Color del botón
+    iconColor: '#a0ffff',           // Color del icono
+    confirmButtonText: '<span class="swal2-ok-text">OK</span>', // Texto del botón
+    customClass: {
+    confirmButton: 'swal2-ok-btn' // Clase personalizada para el botón
+  }
+  });
+  contactForm.reset(); // Reiniciar el formulario
 });
