@@ -438,6 +438,28 @@ body {
   margin-bottom: 1rem;
 }
 
+.btn-git {
+  background: transparent;
+  color: #a0ffff;;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #a0ffff;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  margin-bottom: 1rem;
+  display: inline-block;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.btn-git:hover {
+  background: #a0ffff;
+  color: #232323;
+  transform: scale(1.05);
+}
+
+
 /* Sección Contacto */
 .contact {
   padding: 3rem 2rem;
