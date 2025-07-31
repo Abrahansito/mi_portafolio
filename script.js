@@ -16,7 +16,7 @@ contactForm.addEventListener("submit", (e) => {
     title: '¡Mensaje enviado!', // Título del alert
     text: 'Gracias por tu interés. Me pondré en contacto pronto.', // Texto del alert
     background: '#232323',         // Fondo del alert
-    color: '#a0ffff',              // Color del texto
+    color: '#ffffffff',              // Color del texto
     confirmButtonColor: '#a0ffff',  // Color del botón
     iconColor: '#a0ffff',           // Color del icono
     confirmButtonText: '<span class="swal2-ok-text">OK</span>', // Texto del botón
