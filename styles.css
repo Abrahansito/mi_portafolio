@@ -111,8 +111,8 @@ body {
 }
 
 .btn-main {
-  background: transparent;
-  color: #a0ffff;;
+  background:  #a0ffff;;
+  color: #232323;;
   padding: 0.8rem 2rem;
   border-radius: 30px;
   font-weight: bold;
@@ -126,12 +126,11 @@ body {
   margin-right: 1rem;
   text-align: center;
 }
-
 .btn-main:hover {
-  background: #a0ffff;
-  color: #232323;
   transform: scale(1.05);
 }
+
+
 
 .btn-secondary {
   background: transparent;
@@ -151,8 +150,6 @@ body {
   margin-right: 1rem;
 }
 .btn-secondary:hover {
-  background: #a0ffff;
-  color: #232323;
   transform: scale(1.05);
 }
 
@@ -449,7 +446,6 @@ body {
   transition: background 0.3s, color 0.3s, transform 0.3s;
   margin-bottom: 1rem;
   display: inline-block;
-  font-size: 1.1rem;
   text-align: center;
 }
 
@@ -514,11 +510,12 @@ body {
   font-weight: bold;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
 }
 
 .contact-form button:hover {
   background: #a0ffff;;
+  transform: scale(1.05);
 }
 
 .swal2-ok-btn .swal2-ok-text {
