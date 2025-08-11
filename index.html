@@ -43,9 +43,9 @@
  <!-- Hero Section Modernizado -->
 <section class="hero-modern" id="inicio">
   <div class="hero-left">
-    <h1>Hola, soy <span class="highlight">Abraham Huamán</span></h1>
-    <h2>Estudiante de Ingeniería de Computación y Sistemas</h2>
-    <p>Apasionado por el desarrollo web y la tecnología.</p>
+    <h1>Hi, I am <span class="highlight">Abraham Huamán</span></h1>
+    <h2>Computer and Systems Engineering student</h2>
+    <p>Passionate about web development and technology.</p>
     <a href="#contacto" class="btn-main">Contáctame</a>
     <a href="#proyectos" class="btn-secondary">Ver Proyectos</a>
     <p class="social-text">Sígueme en mis redes sociales:</p>
@@ -58,9 +58,10 @@
   </div>
   <div class="hero-right">
     <div class="circle-bg">
-      <img src="imagenes/fotito.jpeg" alt="Mi Foto" />
+      <img src="imagenes/fotito.jpeg" alt="Mi Foto" class="hero-image" />
     </div>
   </div>
+  
 </section>
 
 <!-- Sección Sobre Mí -->
@@ -68,13 +69,15 @@
     <h2>SOBRE MÍ</h2>
     <div class="about-content">
       <div class="about-text">
-        <p>Hola, soy Abraham Huamán, 
-          un estudiante de Ingeniería de Computación y Sistemas 
+        <p>Hola, soy Abraham Huamán,
+          estudiante de Ingeniería de Computación y Sistemas 
           con una gran pasión por el desarrollo web y la tecnología. Me encanta aprender 
           nuevas habilidades y enfrentar desafíos que me permitan crecer profesionalmente.</p>
         <p>Actualmente estoy enfocado en mejorar mis habilidades 
           en desarrollo front-end y back-end, así como en bases de datos. Siempre estoy 
-          buscando oportunidades para aplicar mis conocimientos en proyectos reales.</p>
+          buscando oportunidades para aplicar mis conocimientos en proyectos reales. </p>
+        <p>Me considero una persona responsable, con facilidad para el aprendizaje, 
+          trabajo en equipo y adaptación a nuevos entornos. </p>
         <a href="ruta/a/tu-cv.pdf" class="btn-main" download>Descargar CV</a>
       </div>
       <div class="about-image">
@@ -144,7 +147,7 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
           Ipsa error et nam labore fugit id libero, iste, reprehenderit deleniti rerum d
           eserunt! Doloribus consectetur at autem. Eos laboriosam voluptate totam minima!</p>
-          <br><br><a href="#" class="btn-git">Ver GitHub</a>
+          <a href="#" class="btn-git">Ver GitHub</a>
       </div>
       <div class="project-card">
         <img src="imagenes/ejemplo2.png" alt="Proyecto 2" />
@@ -152,7 +155,7 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
            Aut vero unde est dolorem reiciendis. Dignissimos exercitationem atque 
           impedit id beatae quasi omnis quisquam, enim porro facilis eveniet expedita recusandae.</p>
-         <br><br> <a href="#" class="btn-git">Ver GitHub</a>
+         <a href="#" class="btn-git">Ver GitHub</a>
       </div>
       <div class="project-card">
         <img src="imagenes/proyecto3.png" alt="Proyecto 3" />
@@ -161,27 +164,30 @@
           tienda virtual de merchandising enfocada en 
           productos de artistas, anime, series y películas. 
           Se realizó con el lenguaje de C# y .Net</p>
-          <br><br><a href="#" class="btn-git">Ver GitHub</a>
+        <a href="https://github.com/nicolleqa/mercharteria.git" class="btn-git">Ver GitHub</a>
       </div>
     </div>
   </section>
 
-  <!-- Sección Contacto -->
-  <section class="contact" id="contacto">
-    <h2>CONTACTO</h2>
-    <form class="contact-form">
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" name="nombre" required />
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-      <button type="submit" class="btn">Enviar</button>
-    </form>
-  </section>
+<!-- Sección Contacto -->
+<section class="contact" id="contacto">
+  <h2>CONTACTO</h2>
+  <form class="contact-form">
+    <div class="input-group">
+      <i class="fas fa-user"></i>
+      <input type="text" id="nombre" name="nombre" required placeholder="Nombre" />
+    </div>
+    <div class="input-group">
+      <i class="fas fa-envelope"></i>
+      <input type="email" id="email" name="email" required placeholder="Email" />
+    </div>
+    <div class="input-group">
+      <i class="fas fa-comment-dots"></i>
+      <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Mensaje"></textarea>
+    </div>
+    <button type="submit" class="btn">Enviar</button>
+  </form>
+</section>
 
   <!-- Pie de página -->
   <footer class="footer">

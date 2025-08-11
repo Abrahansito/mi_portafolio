@@ -421,6 +421,10 @@ body {
   border: 2px solid #a0ffff; /* Borde visible y moderno */
   box-shadow: 0 0 24px 4px #222, 0 0 8px 2px #a0ffff; /* Sombra extra */
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  align-items: center;
+  justify-content: space-between;  /* Alinea el contenido de la tarjeta */
+  min-height: 530px; /* Asegura que todas las tarjetas tengan la misma altura */
+
 }
 
 .project-card:hover {
@@ -447,6 +451,7 @@ body {
   margin-bottom: 1rem;
   display: inline-block;
   text-align: center;
+  margin: 2rem auto 0 auto;
 }
 
 .btn-git:hover {
@@ -459,63 +464,78 @@ body {
 /* Sección Contacto */
 .contact {
   padding: 3rem 2rem;
-  text-align: center;
   background: #232323;
+  border-radius: 16px;
+  box-shadow: 0 0 24px 4px #222, 0 0 8px 2px #a0ffff;
+  max-width: 500px;
+  margin: 3rem auto;
 }
 
 .contact h2 {
-  margin-bottom: 2rem;
+  text-align: center;
+  color: #a0ffff;
   font-size: 2rem;
-  color: #a0ffff;;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
 }
 
 .contact-form {
-  max-width: 500px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  background: #242424;
-  padding: 2rem;
-  border: 2px solid #a0ffff;
-  border-radius: 16px;
-  box-shadow: 0 0 24px 4px #222, 0 0 8px 2px #a0ffff;
+  gap: 1.5rem;
 }
 
-.contact-form label {
-  text-align: left;
-  margin-top: 1rem;
-  color: #fff;
+.input-group {
+  position: relative;
 }
 
-.contact-form input,
-.contact-form textarea {
+.input-group i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a0ffff;
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
+.input-group input,
+.input-group textarea {
   width: 100%;
-  padding: 0.8rem;
-  margin-top: 0.5rem;
-  background: #2a2a2a;
-  border: 1px solid #3a3a3a;
+  padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+  border-radius: 8px;
+  border: 2px solid #a0ffff;
+  background: #242424;
   color: #fff;
-  border-radius: 4px;
-  outline: none;
   font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
 }
 
-.contact-form button {
-  margin-top: 1.5rem;
-  background: #a0ffff;;
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #ffffff;
+}
+
+.btn {
+  background: #a0ffff;
   color: #232323;
-  border: none;
-  border-radius: 30px;
-  padding: 0.8rem 2rem;
   font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
   font-size: 1.1rem;
+  box-shadow: 0 0 16px 4px #a0ffff;
   cursor: pointer;
-  transition: background 0.3s, color 0.3s, transform 0.3s;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+  margin-top: 1rem;
 }
 
-.contact-form button:hover {
-  background: #a0ffff;;
+.btn:hover {
+  background:  #a0ffff;
+  color: #232323;
   transform: scale(1.05);
+  box-shadow: 0 0 24px 8px  #a0ffff;
 }
 
 .swal2-ok-btn .swal2-ok-text {
