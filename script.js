@@ -51,17 +51,20 @@ function createDots() {
 }
 
 // Actualizar puntos activos
-function updateDots() {
-  const dots = document.querySelectorAll('.dot');
-  dots.forEach((dot, index) => {
-    dot.classList.toggle('active', index === currentIndex);
-  });
-}
-
 // Ir a una diapositiva específica
 function goToSlide(index) {
   currentIndex = index;
-  const scrollPosition = index * (480); // card width + gap
+  
+  // Calcular el scroll para centrar la tarjeta
+  const container = slider.parentElement;
+  const containerWidth = container.offsetWidth;
+  const cardElement = cards[index];
+  const cardOffsetLeft = cardElement.offsetLeft;
+  const cardWidth = cardElement.offsetWidth;
+  
+  // Centrar la tarjeta en el contenedor
+  const scrollPosition = cardOffsetLeft - (containerWidth / 2) + (cardWidth / 2);
+  
   slider.scrollTo({
     left: scrollPosition,
     behavior: 'smooth'
