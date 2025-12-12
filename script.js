@@ -51,6 +51,12 @@ function createDots() {
 }
 
 // Actualizar puntos activos
+function updateDots() {
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentIndex);
+  });
+}
 // Ir a una diapositiva específica
 function goToSlide(index) {
   currentIndex = index;

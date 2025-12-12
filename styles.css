@@ -588,7 +588,7 @@ body {
 @media (max-width: 768px) {
   .certificate-card {
     min-width: 260px;
-    height: 850px;
+    height: 950px;
   }
 
   .slider-container {
