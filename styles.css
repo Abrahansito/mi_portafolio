@@ -4,6 +4,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Evita el desbordamiento horizontal */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 /* Fuentes y colores */
 body {
@@ -11,6 +16,8 @@ body {
   background-color: #1a1a1a;
   color: #fff;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 /* Encabezado */
@@ -236,10 +243,11 @@ body {
 
 /* Sección Certificados con Slider */
 .certificates {
-  padding: 3rem 2rem;
+  padding: 3rem 1rem 4rem 1rem; /* Reducir padding lateral en móvil */
   background: #232323;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden; /* AGREGAR ESTO */
+  width: 100%; 
 }
 
 .certificates h2 {
@@ -255,7 +263,10 @@ body {
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 60px 2rem 60px;
+  overflow-x: hidden; /* AGREGAR ESTO */
+  width: 100%;
+  box-sizing: border-box; /* AGREGAR ESTO */
 }
 
 .certificates-slider {
@@ -264,13 +275,14 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   padding: 1rem 0;
+  width: 100%; /* AGREGAR ESTO */
 }
 
 .certificate-card {
   width: 530px; /* ANCHO FIJO - ajusta según necesites */
   min-width: 530px; /* AGREGAR ESTO */
   max-width: 530px; /* AGREGAR ESTO */
-  height: 750px; /* ALTURA FIJA para todas las tarjetas */
+  height: 800px; /* ALTURA FIJA para todas las tarjetas */
   background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
   border-radius: 16px;
   border: 2px solid #a0ffff;
@@ -637,6 +649,42 @@ body {
 
   .certificates h2 {
     font-size: 1.5rem;
+  }
+}
+
+/* Arreglo específico para móviles */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  .certificates {
+    padding: 2rem 0.5rem 3rem 0.5rem;
+    overflow-x: hidden;
+  }
+  
+  .slider-container {
+    padding: 0 50px 1.5rem 50px;
+    overflow-x: hidden;
+  }
+  
+  .certificates-slider {
+    overflow-x: hidden;
+  }
+  
+  /* Asegurar que las tarjetas no causen scroll */
+  .certificate-card {
+    max-width: calc(100vw - 120px); /* Resta el espacio de los botones */
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-container {
+    padding: 0 40px 1.5rem 40px;
+  }
+  
+  .certificate-card {
+    max-width: calc(100vw - 100px);
   }
 }
 
