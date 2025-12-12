@@ -26,3 +26,146 @@ contactForm.addEventListener("submit", (e) => {
   });
   contactForm.reset(); // Reiniciar el formulario
 });
+
+
+
+// Slider de certificados
+// Variables del slider
+const slider = document.getElementById('certificatesSlider');
+const dotsContainer = document.getElementById('sliderDots');
+const cards = document.querySelectorAll('.certificate-card');
+
+let currentIndex = 0;
+const cardWidth = 304; // ancho de la tarjeta + gap
+const totalCards = cards.length;
+
+// Crear indicadores de puntos
+function createDots() {
+  for (let i = 0; i < totalCards; i++) {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
+}
+
+// Actualizar puntos activos
+function updateDots() {
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentIndex);
+  });
+}
+
+// Ir a una diapositiva específica
+function goToSlide(index) {
+  currentIndex = index;
+  const scrollPosition = index * (480); // card width + gap
+  slider.scrollTo({
+    left: scrollPosition,
+    behavior: 'smooth'
+  });
+  updateDots();
+}
+
+// Deslizar a la izquierda
+function slideLeft() {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = totalCards - 1;
+  }
+  goToSlide(currentIndex);
+}
+
+// Deslizar a la derecha
+function slideRight() {
+  if (currentIndex < totalCards - 1) {
+    currentIndex++;
+  } else {
+    currentIndex = 0;
+  }
+  goToSlide(currentIndex);
+}
+
+// Autoplay opcional (comentado por defecto)
+let autoplayInterval;
+function startAutoplay() {
+  autoplayInterval = setInterval(() => {
+    slideRight();
+  }, 1000);
+}
+
+function stopAutoplay() {
+  clearInterval(autoplayInterval);
+}
+
+// Inicializar
+createDots();
+
+// Opcional: Descomentar para activar autoplay
+// startAutoplay();
+
+// Pausar autoplay al hacer hover
+slider.addEventListener('mouseenter', stopAutoplay);
+slider.addEventListener('mouseleave', () => {
+  // Descomentar para reactivar autoplay después del hover
+     //startAutoplay();
+});
+
+// Soporte táctil para dispositivos móviles
+let startX = 0;
+let scrollLeft = 0;
+
+slider.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].pageX;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('touchmove', (e) => {
+  const x = e.touches[0].pageX;
+  const walk = (startX - x) * 2;
+  slider.scrollLeft = scrollLeft + walk;
+});
+
+slider.addEventListener('touchend', () => {
+  const newIndex = Math.round(slider.scrollLeft / cardWidth);
+  currentIndex = newIndex;
+  goToSlide(currentIndex);
+});
+
+// ===== FUNCIONES PARA EL MODAL =====
+
+// Abrir modal con la imagen del certificado
+function openModal(event, imageSrc) {
+  event.preventDefault();
+  const modal = document.getElementById('certificateModal');
+  const modalImage = document.getElementById('modalImage');
+  modalImage.src = imageSrc;
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+}
+
+// Cerrar modal
+function closeModal(event) {
+  // Cerrar solo si se hace clic en el overlay o en el botón de cerrar
+  if (event.target.classList.contains('modal-overlay') || 
+      event.target.classList.contains('modal-close') ||
+      event.target.closest('.modal-close')) {
+    const modal = document.getElementById('certificateModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Restaurar scroll del body
+  }
+}
+
+// Cerrar modal con tecla ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const modal = document.getElementById('certificateModal');
+    if (modal.classList.contains('active')) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+});

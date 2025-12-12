@@ -28,6 +28,7 @@
         <li><a href="#sobre-mi">Sobre Mí</a></li>
         <li><a href="#servicios">Habilidades</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#certificados">Certificados</a></li>
         <li><a href="#contacto">Contacto</a></li>
         <li><a href="ruta/a/tu-cv.pdf" download>Descargar CV</a></li>
       </ul>
@@ -50,7 +51,6 @@
     <a href="#proyectos" class="btn-secondary">Ver Proyectos</a>
     <p class="social-text">Sígueme en mis redes sociales:</p>
     <div class="social-icons">
-      <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-tiktok"></i></a>
       <a href="https://youtube.com/@abrahamhc9?si=cdDbJTCbxC989cDx"><i class="fab fa-youtube"></i></a>
       <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -72,7 +72,7 @@
         <p>Hola, soy Abraham Huamán,
           estudiante de Ingeniería de Computación y Sistemas 
           con una gran pasión por el desarrollo web y la tecnología. Me encanta aprender 
-          nuevas habilidades y enfrentar desafíos que me permitan crecer profesionalmente.</p>
+          nuevas herramientas y enfrentar desafíos que me permitan crecer profesionalmente.</p>
         <p>Actualmente estoy enfocado en mejorar mis habilidades 
           en desarrollo front-end y back-end, así como en bases de datos. Siempre estoy 
           buscando oportunidades para aplicar mis conocimientos en proyectos reales. </p>
@@ -142,32 +142,219 @@
     <h2>PROYECTOS DESTACADOS</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <img src="imagenes/ejemplo1.png" alt="Proyecto 1" />
-        <h3>Ecommerce</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-          Ipsa error et nam labore fugit id libero, iste, reprehenderit deleniti rerum d
-          eserunt! Doloribus consectetur at autem. Eos laboriosam voluptate totam minima!</p>
-          <a href="#" class="btn-git">Ver GitHub</a>
+        <img src="imagenes/Hospital Hipólito Unanue.png" alt="Proyecto 1" />
+        <h3>SISTEMA DE GESTIÓN MEDICINA GENERAL</h3>
+        <p>SIGMEG es una plataforma integral para el Hospital Hipólito Unanue que centraliza la atención médica, permitiendo gestionar pacientes, citas,
+          órdenes, recetas, pagos y triaje desde un solo lugar. Mejora la eficiencia del 
+          personal, agiliza la atención al paciente y garantiza seguridad y trazabilidad de la información.</p>
+          <a href="https://github.com/victormanuel-12/PROY-20252SGMG.git" class="btn-git">Ver GitHub</a>
       </div>
       <div class="project-card">
-        <img src="imagenes/ejemplo2.png" alt="Proyecto 2" />
-        <h3>Restaurante</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-           Aut vero unde est dolorem reiciendis. Dignissimos exercitationem atque 
-          impedit id beatae quasi omnis quisquam, enim porro facilis eveniet expedita recusandae.</p>
-         <a href="#" class="btn-git">Ver GitHub</a>
+        <img src="imagenes/Cultivarium.png" alt="Proyecto 2" />
+        <h3>CULTIVARIUM</h3>
+        <p>Cultivarium es un prototipo de simulación agrícola creado con Phaser 3 y Vite 
+          para el NASA Space Apps Challenge 2025. Proporciona una experiencia estilo tablero 
+          donde los jugadores administran parcelas, reaccionan a indicadores ambientales y exploran 
+          decisiones agrícolas basadas en datos.</p>
+         <a href="https://github.com/reyrojo2/Project-Cultivarium.git" class="btn-git">Ver GitHub</a>
       </div>
       <div class="project-card">
         <img src="imagenes/proyecto3.png" alt="Proyecto 3" />
-        <h3>Arteria Merch</h3>
-        <p>El proyecto consiste en el desarrollo de una 
-          tienda virtual de merchandising enfocada en 
-          productos de artistas, anime, series y películas. 
-          Se realizó con el lenguaje de C# y .Net</p>
-        <a href="https://github.com/nicolleqa/mercharteria.git" class="btn-git">Ver GitHub</a>
+        <h3>ARTERIA MERCH</h3>
+        <p>Arteria Merch es una tienda virtual de merchandising especializada en productos de artistas, anime, 
+          series y películas. El proyecto fue desarrollado utilizando C# y .NET.</p>
+        <br><br><a href="https://github.com/nicolleqa/mercharteria.git" class="btn-git">Ver GitHub</a>
       </div>
     </div>
   </section>
+
+
+<!-- Sección Certificados -->
+<!-- Modal para ver certificado completo -->
+  <div class="modal-overlay" id="certificateModal" onclick="closeModal(event)">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal(event)">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="modalImage" src="" alt="Certificado completo">
+      <div class="modal-info">
+        <i class="fas fa-info-circle"></i> Haz clic fuera de la imagen para cerrar
+      </div>
+    </div>
+  </div>
+
+
+<!-- Sección Certificados -->
+<section class="certificates" id="certificados">
+  <h2>CERTIFICADOS</h2>
+  
+  <div class="slider-container">
+    <!-- Botón anterior -->
+    <div class="slider-nav slider-prev" onclick="slideLeft()">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+
+    <!-- Slider de certificados -->
+    <div class="certificates-slider" id="certificatesSlider">
+      
+      <div class="certificate-card">
+        <div class="certificate-image">
+          <img src="imagenes/certificado-ruta-programacion.png" alt="Certificado 1" />
+        </div>
+        <div class="certificate-content">
+          <h3>Programación desde cero con IA — EDteam</h3>
+          <p>Curso orientado al uso de herramientas de Inteligencia Artificial
+            para acelerar el desarrollo de software. Aprendí a estructurar
+            requerimientos, generar código mediante IA, interpretar y mejorar
+            las soluciones propuestas, así como publicar proyectos funcionales en la web.
+          </p>
+       <p><strong>Competencias adquiridas:</strong></p>
+        <ul>
+          <li>Comprensión de los fundamentos de la programación.</li>
+          <li>Uso de IA para generar, analizar y optimizar código.</li>
+          <li>Traducción de requerimientos a prompts efectivos.</li>
+          <li>Publicación y mejora continua de proyectos.</li>
+        </ul>
+          <div class="certificate-meta">
+            <div class="certificate-date">
+              <i class="fas fa-calendar-alt"></i>
+              <span>2025</span>
+            </div>
+            <a href="#" class="view-certificate" onclick="openModal(event, 'imagenes/certificado-ruta-programacion.png')">
+              Ver <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="certificate-card">
+        <div class="certificate-image">
+          <img src="imagenes/certificado-ruta-tecnologia-programacion-2022.png" alt="Certificado 2" />
+        </div>
+        <div class="certificate-content">
+          <h3>¿Cómo funciona la tecnología? El software y la programación — EDteam</h3>
+          <p>Curso introductorio sobre el funcionamiento del software y el rol de la programación en el mundo actual. 
+            Comprendí los conceptos fundamentales que sustentan la industria tecnológica, 
+            las áreas profesionales donde se aplica la programación y la importancia de los lenguajes de 
+            programación en la creación de soluciones digitales.
+          </p>
+           <p><strong>Competencias adquiridas:</strong></p>
+           <ul>
+            <li>Comprensión de los conceptos básicos del software y la computación.</li>
+            <li>Identificación de áreas profesionales como desarrollo web, móvil, videojuegos y más.</li>
+            <li>Entendimiento del rol del programador en el ecosistema tecnológico.</li>
+            <li>Conocimiento general sobre lenguajes de programación y sus usos.</li>
+          </ul>
+          <div class="certificate-meta">
+            <div class="certificate-date">
+              <i class="fas fa-calendar-alt"></i>
+              <span>2025</span>
+            </div>
+            <a href="#" class="view-certificate" onclick="openModal(event, 'imagenes/certificado-ruta-tecnologia-programacion-2022.png')">
+              Ver <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="certificate-card">
+        <div class="certificate-image">
+          <img src="imagenes/VISIÓN 2025.png" alt="Certificado 3" />
+        </div>
+        <div class="certificate-content">
+          <h3>Visión 2025 - USMP</h3>
+          <p>Congreso Internacional de Ingeniería, Ciencias Arenáuticas y Arquitecura: Inteligencia e Innovación</p>
+          <div class="certificate-meta">
+            <div class="certificate-date">
+              <i class="fas fa-calendar-alt"></i>
+              <span>2025</span>
+            </div>
+            <a href="#" class="view-certificate" onclick="openModal(event, 'imagenes/VISIÓN 2025.png')">
+              Ver <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="certificate-card">
+        <div class="certificate-image">
+          <img src="imagenes/EXPOEPICS.png" alt="Certificado 4" />
+        </div>
+        <div class="certificate-content">
+          <h3>EXPO EPICS - USMP</h3>
+          <p></p>
+          <div class="certificate-meta">
+            <div class="certificate-date">
+              <i class="fas fa-calendar-alt"></i>
+              <span>2023</span>
+            </div>
+            <a href="#" class="view-certificate" onclick="openModal(event, 'imagenes/EXPOEPICS.png')">
+              Ver <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+       <div class="certificate-card">
+        <div class="certificate-image">
+          <img src="imagenes/Ofimática.png" alt="Certificado 5" />
+        </div>
+        <div class="certificate-content">
+          <h3>OFIMÁTICA - USMP</h3>
+          <p>Curso orientado al uso profesional de herramientas de Microsoft Office para la gestión
+             académica y administrativa. Incluye aplicaciones como Word, Excel, PowerPoint, Project y Visio, aplicadas a 
+            la elaboración de documentos, análisis de datos y organización de proyectos.</p>
+            <p><strong>Competencias adquiridas:</strong></p>
+            <ul>
+              <li>Elaboración de documentos profesionales con MS Word.</li>
+              <li>Gestión y análisis básico de información con MS Excel.</li>
+              <li>Creación de presentaciones efectivas en MS PowerPoint.</li>
+              <li>Planificación y seguimiento de proyectos con MS Project.</li>
+              <li>Diagramación y modelado básico con MS Visio.</li>
+          </ul>
+          <div class="certificate-meta">
+            <div class="certificate-date">
+              <i class="fas fa-calendar-alt"></i>
+              <span>2023</span>
+            </div>
+            <a href="#" class="view-certificate" onclick="openModal(event, 'imagenes/Ofimática.png')">
+              Ver <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+       
+
+    </div>
+
+    <!-- Botón siguiente -->
+    <div class="slider-nav slider-next" onclick="slideRight()">
+      <i class="fas fa-chevron-right"></i>
+    </div>
+  </div>
+
+  <!-- Indicadores de puntos -->
+  <div class="slider-dots" id="sliderDots"></div>
+</section>
+
+<!-- Modal para ver certificado completo -->
+<div class="modal-overlay" id="certificateModal" onclick="closeModal(event)">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal(event)">
+      <i class="fas fa-times"></i>
+    </button>
+    <img id="modalImage" src="" alt="Certificado completo">
+    <div class="modal-info">
+      <i class="fas fa-info-circle"></i> Haz clic fuera de la imagen para cerrar | Presiona ESC
+    </div>
+  </div>
+</div>
+
+
+
 
 <!-- Sección Contacto -->
 <section class="contact" id="contacto">
