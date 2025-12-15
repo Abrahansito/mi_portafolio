@@ -103,7 +103,7 @@ let autoplayInterval;
 function startAutoplay() {
   autoplayInterval = setInterval(() => {
     slideRight();
-  }, 1000);
+  }, 3000); // Cambia cada 3 segundos
 }
 
 function stopAutoplay() {
@@ -120,7 +120,7 @@ createDots();
 slider.addEventListener('mouseenter', stopAutoplay);
 slider.addEventListener('mouseleave', () => {
   // Descomentar para reactivar autoplay después del hover
-  startAutoplay();
+  //startAutoplay();
 });
 
 // Soporte táctil para dispositivos móviles
