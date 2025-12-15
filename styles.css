@@ -30,6 +30,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
+  width: 100%; /* Asegura que el encabezado ocupe todo el ancho */
 }
 
 .logo {
@@ -810,6 +811,8 @@ body {
   justify-content: center;
   gap: 1rem;
   margin-bottom: 1rem;
+  flex-wrap: wrap; /*Permite que se envuelvan */
+  padding: 0 0.5rem; /* Padding lateral */
 }
 
 .tech-logos img {
@@ -971,6 +974,108 @@ body {
 .swal2-ok-btn .swal2-ok-text {
   color: #232323 !important;
 }
+
+/* Ajustes para el formulario de contacto en móvil */
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem 1rem; /* Reducir padding */
+    max-width: 90%; /* Reducir ancho máximo */
+    margin: 2rem auto; /* Reducir margen */
+  }
+  
+  .contact h2 {
+    font-size: 1.6rem; /* Reducir tamaño del título */
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-form {
+    gap: 1rem; /* Reducir espacio entre campos */
+  }
+  
+  .input-group {
+    margin-bottom: 0; /* Quitar margen extra */
+  }
+  
+  .input-group input,
+  .input-group textarea {
+    padding: 0.7rem 0.7rem 0.7rem 2.5rem; /* Reducir padding */
+    font-size: 0.95rem; /* Reducir tamaño de fuente */
+  }
+  
+  .input-group i {
+    left: 12px; /* Ajustar posición del ícono */
+    font-size: 1.1rem; /* Reducir tamaño del ícono */
+  }
+  
+  .input-group textarea {
+    rows: 4; /* Reducir filas del textarea */
+    min-height: 100px; /* Altura mínima más pequeña */
+  }
+  
+  .btn {
+    padding: 0.7rem 1.5rem; /* Reducir padding del botón */
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 1.5rem 0.8rem;
+    max-width: 95%;
+    margin: 1.5rem auto;
+  }
+  
+  .contact h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+  }
+  
+  .input-group input,
+  .input-group textarea {
+    padding: 0.6rem 0.6rem 0.6rem 2.3rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+  
+  .input-group i {
+    left: 10px;
+    font-size: 1rem;
+  }
+  
+  .input-group textarea {
+    min-height: 90px;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.3rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Ajustar el modal de "Mensaje enviado" en móvil */
+@media (max-width: 480px) {
+  .swal2-popup {
+    padding: 1.5rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .swal2-title {
+    font-size: 1.3rem !important;
+  }
+  
+  .swal2-html-container {
+    font-size: 0.85rem !important;
+  }
+  
+  .swal2-icon {
+    width: 60px !important;
+    height: 60px !important;
+    padding: 0.38rem !important;
+  }
+}
+
 
 /* Pie de página */
 .footer {
