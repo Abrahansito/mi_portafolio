@@ -690,10 +690,6 @@ body {
   }
 }
 
-    
-    
-
-
 /* Sección Sobre Mí */
 .about {
   padding: 3rem 2rem;
@@ -1114,7 +1110,7 @@ body {
   }
   .navbar {
     position: absolute;
-    top: 70px;
+    top: 100px;
     right: 0;
     background: #242424;
     width: 200px;
@@ -1137,5 +1133,8 @@ body {
   .hero-modern {
     flex-direction: column;
     padding: 2rem 1rem;
+  }
+  .btn-main, .btn-secondary {
+    margin: 1rem;
   }
 }
