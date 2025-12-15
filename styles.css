@@ -246,7 +246,7 @@ body {
   padding: 3rem 1rem 4rem 1rem; /* Reducir padding lateral en móvil */
   background: #232323;
   position: relative;
-  overflow-x: hidden; /* AGREGAR ESTO */
+  overflow-x: hidden; 
   width: 100%; 
 }
 
@@ -264,9 +264,9 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 60px 2rem 60px;
-  overflow-x: hidden; /* AGREGAR ESTO */
+  overflow-x: hidden; 
   width: 100%;
-  box-sizing: border-box; /* AGREGAR ESTO */
+  box-sizing: border-box;
 }
 
 .certificates-slider {
@@ -275,20 +275,20 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   padding: 1rem 0;
-  width: 100%; /* AGREGAR ESTO */
+  width: 100%; 
 }
 
 .certificate-card {
-  width: 530px; /* ANCHO FIJO - ajusta según necesites */
-  min-width: 530px; /* AGREGAR ESTO */
-  max-width: 530px; /* AGREGAR ESTO */
+  width: 530px; /* ANCHO FIJO  */
+  min-width: 530px; 
+  max-width: 530px; 
   height: 800px; /* ALTURA FIJA para todas las tarjetas */
   background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
   border-radius: 16px;
   border: 2px solid #a0ffff;
   box-shadow: 0 0 20px 2px rgba(160, 255, 255, 0.2);
   overflow: hidden;
-  /*overflow-y: auto; /* AGREGAR ESTA LÍNEA para scroll si es necesario */
+  /*overflow-y: auto; /*Para scroll si es necesario */
   transition: all 0.4s ease;
   flex-shrink: 0;
 }
@@ -336,8 +336,8 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* AGREGAR ESTO */
-  word-wrap: break-word; /* AGREGAR ESTO - rompe palabras largas */
+  overflow: hidden;
+  word-wrap: break-word; /*rompe palabras largas */
 }
 
 .certificate-content h3 {
@@ -352,8 +352,8 @@ body {
   font-size: 0.85rem;
   line-height: 1.5;
   margin-bottom: 0.8rem;
-  word-wrap: break-word; /* AGREGAR ESTO */
-  overflow-wrap: break-word; /* AGREGAR ESTO */
+  word-wrap: break-word; /*rompe palabras largas */
+  overflow-wrap: break-word; 
 }
 
 
@@ -588,7 +588,7 @@ body {
 @media (max-width: 768px) {
   .certificate-card {
     min-width: 260px;
-    height: 1000px;
+    height: 1110px;
   }
 
   .slider-container {
