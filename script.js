@@ -114,13 +114,13 @@ function stopAutoplay() {
 createDots();
 
 // Opcional: Descomentar para activar autoplay
-// startAutoplay();
+  startAutoplay();
 
 // Pausar autoplay al hacer hover
 slider.addEventListener('mouseenter', stopAutoplay);
 slider.addEventListener('mouseleave', () => {
   // Descomentar para reactivar autoplay después del hover
-     //startAutoplay();
+  startAutoplay();
 });
 
 // Soporte táctil para dispositivos móviles
