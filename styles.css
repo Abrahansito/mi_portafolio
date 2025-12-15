@@ -1008,7 +1008,7 @@ body {
   }
   
   .input-group textarea {
-    rows: 4; /* Reducir filas del textarea */
+    row-gap: 4; /* Reducir filas del textarea */
     min-height: 100px; /* Altura mínima más pequeña */
   }
   
