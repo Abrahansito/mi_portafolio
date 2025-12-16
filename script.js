@@ -23,7 +23,7 @@ Swal.fire({
 });
 
   try {
-    const response = await fetch("https://portfolio-backend-0fut.onrender.com/contact", {
+    const response = await fetch("https://portfolio-backend-0fut.onrender.com/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
