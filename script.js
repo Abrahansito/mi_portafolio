@@ -16,7 +16,7 @@ contactForm.addEventListener("submit", async (e) => {e.preventDefault();
   const message = document.getElementById("mensaje").value;
 
   try {
-    const response = await fetch("http://localhost:3000/api/contact", {
+    const response = await fetch("https://portfolio-backend-0fut.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
