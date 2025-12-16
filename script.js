@@ -16,11 +16,11 @@ contactForm.addEventListener("submit", async (e) => {e.preventDefault();
   const message = document.getElementById("mensaje").value;
 
 //Mostrar alerta de carga
-Swal.fire({
+/* Swal.fire({
   title: "Enviando...",
   allowOutsideClick: false,
   didOpen: () => Swal.showLoading()
-});
+}); */
 
   try {
     const response = await fetch("https://portfolio-backend-0fut.onrender.com/api/contact", {
