@@ -15,8 +15,15 @@ contactForm.addEventListener("submit", async (e) => {e.preventDefault();
   const email = document.getElementById("email").value;
   const message = document.getElementById("mensaje").value;
 
+//Mostrar alerta de carga
+Swal.fire({
+  title: "Enviando...",
+  allowOutsideClick: false,
+  didOpen: () => Swal.showLoading()
+});
+
   try {
-    const response = await fetch("https://portfolio-backend-0fut.onrender.com", {
+    const response = await fetch("https://portfolio-backend-0fut.onrender.com/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
