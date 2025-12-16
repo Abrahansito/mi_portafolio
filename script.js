@@ -42,7 +42,7 @@ contactForm.addEventListener("submit", async (e) => {e.preventDefault();
   Swal.fire({
     icon: 'success', // Icono de éxito
     title: '¡Mensaje enviado!', // Título del alert
-    text: 'Gracias por tu interés. Me pondré en contacto pronto.', // Texto del alert
+    text: 'Gracias por contactarme. Te responderé a la brevedad.', // Texto del alert
     background: '#232323',         // Fondo del alert
     color: '#ffffffff',              // Color del texto
     confirmButtonColor: '#a0ffff',  // Color del botón
