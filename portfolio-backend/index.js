@@ -9,7 +9,9 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(cors({
+  origin: "https://abrahansito.github.io/mi_portafolio/"
+}));
 app.use(express.json());
 
 // Ruta de prueba
