@@ -9,8 +9,29 @@ hamburger.addEventListener("click", () => {
 
 // Ejemplo de alerta al enviar el formulario de contacto
 const contactForm = document.querySelector(".contact-form");
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+contactForm.addEventListener("submit", async (e) => {e.preventDefault();
+  
+  const name = document.getElementById("nombre").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("mensaje").value;
+
+  try {
+    const response = await fetch("http://localhost:3000/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Error al enviar el mensaje");
+    }
+
   Swal.fire({
     icon: 'success', // Icono de éxito
     title: '¡Mensaje enviado!', // Título del alert
@@ -25,8 +46,19 @@ contactForm.addEventListener("submit", (e) => {
   }
   });
   contactForm.reset(); // Reiniciar el formulario
-});
 
+  } catch (error) {
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: "No se pudo enviar el mensaje. Inténtalo más tarde.",
+      background: "#232323",
+      color: "#ffffff",
+      confirmButtonColor: "#ff6b6b",
+      confirmButtonText: "OK",
+    });
+  }
+});
 
 
 // Slider de certificados
