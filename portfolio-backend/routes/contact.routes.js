@@ -16,8 +16,8 @@ router.post("/", async (req, res) => {
 
     res.status(201).json({ message: "Mensaje enviado correctamente" });
   } catch (error) {
-    console.error("ERROR AL GUARDAR:", error);
-    res.status(500).json({ error: error.message });
+    // console.error("ERROR AL GUARDAR:", error);
+    // res.status(500).json({ error: error.message });
     res.status(500).json({ error: "Error al guardar el mensaje" });
   }
 });
